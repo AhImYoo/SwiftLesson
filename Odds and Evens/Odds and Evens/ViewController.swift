@@ -9,11 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var computerMarbleCountLabel: UILabel!
+    @IBOutlet weak var userMarbelCountLabel: UILabel!
+    
+    var comMarbleCount: Int = 20
+    var userMarbelCount: Int = 20
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        computerMarbleCountLabel.text = String(comMarbleCount)
+        userMarbelCountLabel.text = String(userMarbelCount)
+        
+        
     }
-
+    @IBAction func gameStartButton(_ sender: Any) {
+        print("GAME-START!!")
+    }
+    
 
 }
 
